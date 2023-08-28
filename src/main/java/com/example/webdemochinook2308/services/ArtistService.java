@@ -23,6 +23,7 @@ public class ArtistService {
     }
 
     public void deleteArtist(int id) {
+
         artistRepository.deleteById(id);
     }
 
@@ -36,5 +37,9 @@ public class ArtistService {
             a.setName(name);
             artistRepository.save(a);
         });
+    }
+
+    public List<Artist> getArtistsWithOneWord() {
+        return artistRepository.findByNameNotContains(" ");
     }
 }

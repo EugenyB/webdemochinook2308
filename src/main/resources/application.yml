@@ -8,6 +8,6 @@ spring:
       naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
   mvc:
-    hidden-method:
+    hiddenmethod:
       filter:
-        enabled=true:
+        enabled: true
